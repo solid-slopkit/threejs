@@ -14,7 +14,7 @@ Run every command with mise's Node: start each shell with `eval "$(mise env -s b
 ## 1. Check the starting point
 
 - `git status --short` is clean, and the branch is `main`, up to date with `origin/main` (`git fetch origin && git status -sb`). If not, tell the user and ask how to proceed. Don't switch branches or pull over their work yourself.
-- The current version: `node -e "import('./scripts/packages.mjs').then((m) => console.log(m.sharedVersion()))"` (`packages.mjs` reads every `packages/*` folder; there is one).
+- The current version: `node -e "import('./scripts/package.mjs').then((m) => console.log(m.version))"`.
 - The last release: `git tag -l 'v*' --sort=-v:refname | head -1` (none before the first release), and what npm has: `npm view @solid-slopkit/threejs versions` (an E404 means nothing is on npm yet; see "First publish" below).
 
 ## 2. Make sure there are changesets
@@ -49,7 +49,7 @@ The workflow runs these on a GPU-less Linux runner. Running them first saves a f
 pnpm format:check
 pnpm lint
 pnpm release:check                      # builds the package and lists what npm would publish
-pnpm -r --filter "./packages/*" typecheck
+pnpm --filter @solid-slopkit/threejs typecheck
 pnpm test
 pnpm --filter docs build && pnpm --filter docs typecheck
 node scripts/release-notes.mjs          # the release notes the workflow will publish

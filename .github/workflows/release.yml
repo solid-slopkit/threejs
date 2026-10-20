@@ -28,7 +28,7 @@ jobs:
 
       - name: Tag matches the package's version, with no changesets left unapplied
         run: |
-          version=$(node -e "import('./scripts/packages.mjs').then((m) => console.log(m.sharedVersion()))")
+          version=$(node -e "import('./scripts/package.mjs').then((m) => console.log(m.version))")
           if [ "${GITHUB_REF_NAME#v}" != "$version" ]; then
             echo "Tag $GITHUB_REF_NAME does not match the package's version $version"
             exit 1
@@ -42,7 +42,7 @@ jobs:
       - run: pnpm lint
       # Builds the package and lists the files npm will publish, in the log.
       - run: pnpm release:check
-      - run: pnpm -r --filter "./packages/*" typecheck
+      - run: pnpm --filter @solid-slopkit/threejs typecheck
       # The browser test projects run in Chromium. The runner has no GPU, so WebGL and WebGPU draw through SwiftShader
       # (see packages/threejs/vite.config.ts).
       - run: pnpm --filter @solid-slopkit/threejs exec playwright install --with-deps chromium

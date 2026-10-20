@@ -5,7 +5,7 @@
   "changelog": "@changesets/cli/changelog",
   "commit": false,
   "ignore": [],
-  "fixed": [["@solid-slopkit/*"]],
+  "fixed": [],
   "linked": [],
   "updateInternalDependencies": "patch"
 }

@@ -42,7 +42,7 @@ An agent can run the whole release with the `release` skill (`.claude/skills/rel
 3. **Check it locally** (the workflow runs the same checks, so this only saves a round trip):
 
    ```bash
-   pnpm format:check && pnpm lint && pnpm release:check && pnpm -r --filter "./packages/*" typecheck && pnpm test
+   pnpm format:check && pnpm lint && pnpm release:check && pnpm --filter @solid-slopkit/threejs typecheck && pnpm test
    ```
 
 4. **Commit, tag and push.**
