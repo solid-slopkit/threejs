@@ -2,7 +2,7 @@
 
 [`@solid-slopkit/threejs`](./packages/threejs): three.js scenes described with SolidJS 2.x components inside a `Canvas`, updated through fine-grained reactivity.
 
-[`apps/docs`](./apps/docs) is the documentation site, published at https://solid-slopkit.github.io/threejs/. [CONTEXT-MAP.md](./CONTEXT-MAP.md) explains how the package relates to the other `@solid-slopkit` packages, and [AGENTS.md](./AGENTS.md) is the guide for coding agents.
+[`apps/docs`](./apps/docs) is the documentation site, published at https://solid-slopkit.github.io/threejs/. [AGENTS.md](./AGENTS.md) is the guide for coding agents.
 
 ## Installing
 

@@ -71,3 +71,13 @@ _Avoid_: render override, custom renderer
 **Rebuild**:
 Replacing a component's **Instance** with a new one because its **Args** changed, while keeping the component, its children and their state.
 _Avoid_: remount, recreate, re-render
+
+### Agent docs
+
+**Skill**:
+A task-oriented guide for coding agents (`skills/<area>/SKILL.md`), shipped in the package.
+_Avoid_: guide, recipe
+
+**LLM reference**:
+Handwritten Markdown for agents next to the source, shipped in the package: one page per area. `llms.md` is the package's index.
+_Avoid_: llms.txt (that is only the index), API docs
