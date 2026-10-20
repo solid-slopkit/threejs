@@ -1,5 +1,5 @@
 /*
- * Example themes for the docs. They show both kinds ADR 0005 describes: `orange` supports both color schemes
+ * Example themes for the docs. They show both kinds of theme: `orange` supports both color schemes
  * with light-dark(), and `green` supports only light, so it sets color-scheme itself. Tokens a theme leaves out
  * (shape, status colors) come from the default theme on :root.
  */

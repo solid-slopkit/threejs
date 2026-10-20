@@ -1,6 +1,6 @@
 # @solid-slopkit/threejs roadmap to 0.0.1
 
-0.0.1 is the first release: the core, plus orbit controls as the first helper. Decisions live in [docs/adr](./adr) (repo-wide ones in [/docs/adr](../../../docs/adr)) and vocabulary in [CONTEXT.md](../CONTEXT.md). Use its terms (**Canvas**, **Scene component**, **Instance**, **Attach**, **Rebuild**, **Invalidate**, …) in code, tests and docs.
+0.0.1 is the first release: the core, plus orbit controls as the first helper. Decisions live in [docs/adr](../../../docs/adr) and vocabulary in [CONTEXT.md](../CONTEXT.md). Use its terms (**Canvas**, **Scene component**, **Instance**, **Attach**, **Rebuild**, **Invalidate**, …) in code, tests and docs.
 
 ## Rules for agents
 
